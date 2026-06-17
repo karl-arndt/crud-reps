@@ -15,7 +15,7 @@ CREATE TABLE Inventory (
 CREATE TABLE Orders (
     id SERIAL PRIMARY KEY,
     customer_id INT REFERENCES Customer(id),
-    created_at TIMESTAMP NOW()
+    created_at TIMESTAMP DEFAULT NOW()
 );
 
 CREATE TABLE OrderItem (
